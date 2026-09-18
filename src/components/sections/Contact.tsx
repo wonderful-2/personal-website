@@ -1,7 +1,6 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { content } from "../../content";
-import { EmailSignup } from "../EmailSignup";
 import { Section } from "./Section";
 
 export function Contact() {
@@ -36,8 +35,6 @@ export function Contact() {
       intro={contact.intro}
     >
       <div className="flex flex-col gap-8">
-        <EmailSignup />
-
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-5">
             <span className="w-10 text-xs uppercase tracking-[0.15em] text-white/40">

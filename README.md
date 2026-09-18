@@ -1,6 +1,6 @@
 # 个人网站
 
-单屏 Hero 首页：全屏背景视频 + 顶部玻璃拟态导航 + 底部锚定的标题、邮箱 CTA 和两张玻璃卡片。
+个人网站：全屏背景视频的 Hero 首屏 + 顶部玻璃拟态导航（React Bits 扫光按钮）+ 关于我 / 在做的事 / 服务 / 联系四个板块。联系靠微信二维码和邮箱，不放表单。
 
 ## 本地运行
 
@@ -34,7 +34,6 @@ src/
     Backdrop.tsx          全站固定的背景视频层（下滚渐暗）
     Nav.tsx               桌面导航 + 汉堡按钮
     MobileMenu.tsx        移动端遮罩 + 抽屉
-    EmailSignup.tsx       邮箱 CTA
     StatsCard.tsx         数据卡片
     Logo.tsx              品牌图标
     SpecularButton.tsx    React Bits 扫光按钮（WebGL / ogl）
@@ -48,22 +47,20 @@ src/
 - 背景视频自托管在 `public/hero.mp4`（约 14MB），换素材直接替换该文件，路径写在 `src/theme.ts`。
 - 导航里四个锚点用的是 React Bits 的 `SpecularButton`，鼠标靠近时边缘会有一道扫光跟随。
 - 字体（Geist Sans / Silkscreen）已改为本地自托管，不再依赖 Google Fonts——国内访问不了 Google Fonts，会让访客看到系统默认字体。
+- 联系方式只有两个：微信二维码（`public/wechat-qr.jpg`，点击可复制微信号）和邮箱。**故意不做邮箱表单**——国内访客更愿意扫码加微信，表单反而多一道手续。
 
 ## 上线部署
 
-`npm run build` 产出的是纯静态文件（`dist/`），任何静态托管都能跑。三条常见路线：
+现在跑在 **Cloudflare Pages** 上，仓库是 https://github.com/wonderful-2/personal-website ：
 
-1. **Netlify Drop**（最快，零配置）：打开 https://app.netlify.com/drop，把整个 `dist` 文件夹拖进去，立刻拿到一个公开网址。
-2. **Cloudflare Pages / Vercel**：仓库推到 GitHub 后在平台导入，构建命令 `npm run build`，输出目录 `dist`。
-3. **阿里云 OSS + CDN**：国内访问最快，但需要域名且必须备案。
+- 线上地址：https://personal-website-c96.pages.dev
+- 构建命令 `npm run build`，输出目录 `dist`（Node 版本由 `.nvmrc` 锁定为 20）
+- 往 `main` 分支推送即自动重新部署，不用手动操作
 
-还没处理的：邮箱表单还没有真的后端（现在提交后是诚实提示 + 跳到联系板块）。
+注意：国内网络对 `github.com` 是选择性阻断（`api.github.com` 却通常能通），推送失败时重试几次通常就能过。
 
 ## 待补充
 
-- [ ] 真实姓名 / 品牌名（`content.brand`）
-- [ ] 主标题与一句话介绍（`content.headline`）
-- [ ] 邮箱 CTA 接上真实表单服务（`src/components/EmailSignup.tsx` 里的 TODO）
-- [ ] 数据卡片换成真实数字（`content.stats`）
-- [ ] 客户评价换成真实内容（`content.testimonial`）
-- [ ] 后续页面：关于我、项目列表、博客等
+- [ ] 绑定自己的域名（目前是 Cloudflare 分配的 `pages.dev` 子域名）
+- [ ] 「在做的事」板块换成真实的项目（做出第一个之后）
+- [ ] 首屏视频换素材（现在是 14MB 的通用素材，可换成自己的）
