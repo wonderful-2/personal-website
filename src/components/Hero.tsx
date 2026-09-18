@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { content } from "../content";
-import { heroVideoSrc } from "../theme";
 import { EmailSignup } from "./EmailSignup";
 import { MobileMenu } from "./MobileMenu";
 import { Nav } from "./Nav";
@@ -19,21 +18,8 @@ export function Hero() {
   }, [menuOpen]);
 
   return (
-    <section
-      id="top"
-      // 小屏文字是近黑色、lg 以上是白色，兜底底色跟着一起切换，
-      // 这样即使视频没加载出来，文案也不会看不见。
-      className="relative h-screen w-full overflow-hidden bg-neutral-200 lg:bg-black"
-    >
-      <video
-        src={heroVideoSrc}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-
+    // 背景视频由 Backdrop 统一提供，这里只负责首屏内容，视频首屏同样是满屏铺满
+    <section id="top" className="relative h-screen w-full overflow-hidden">
       <div className="relative z-10 flex h-full flex-col">
         <Nav
           links={content.nav}

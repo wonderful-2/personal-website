@@ -8,6 +8,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
+      index="04"
       label={contact.label}
       title={contact.title}
       intro={contact.intro}
@@ -28,4 +29,3 @@ export function Contact() {
     </Section>
   );
 }
-

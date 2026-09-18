@@ -5,12 +5,18 @@ export function Work() {
   const { work } = content;
 
   return (
-    <Section id="work" label={work.label} title={work.title} intro={work.intro}>
+    <Section
+      id="work"
+      index="02"
+      label={work.label}
+      title={work.title}
+      intro={work.intro}
+    >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
         {work.projects.map((project) => (
           <article
             key={project.title}
-            className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-lg transition-colors hover:border-white/20 hover:bg-white/10"
+            className="flex flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.09] to-white/[0.03] p-6 backdrop-blur-lg transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:from-white/[0.14] hover:to-white/[0.06]"
           >
             <h3 className="text-lg font-semibold text-white">
               {project.title}
@@ -37,4 +43,3 @@ export function Work() {
     </Section>
   );
 }
-
