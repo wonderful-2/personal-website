@@ -31,13 +31,21 @@ src/
   App.tsx                 页面入口
   components/
     Hero.tsx              首屏骨架（视频 + 布局）
+    Backdrop.tsx          全站固定的背景视频层（下滚渐暗）
     Nav.tsx               桌面导航 + 汉堡按钮
     MobileMenu.tsx        移动端遮罩 + 抽屉
     EmailSignup.tsx       邮箱 CTA
     StatsCard.tsx         数据卡片
-    TestimonialCard.tsx   客户评价卡片
     Logo.tsx              品牌图标
+    SpecularButton.tsx    React Bits 扫光按钮（WebGL / ogl）
+    SpecularButton.css
+    sections/             关于我 / 项目 / 服务 / 联系 / 页脚
 ```
+
+## 说明
+
+- 背景视频全站固定，滚过首屏后会渐入一层深色薄纱（浓度在 `Backdrop.tsx` 的 `0.85` 调整）。
+- 导航里四个锚点用的是 React Bits 的 `SpecularButton`，鼠标靠近时边缘会有一道扫光跟随。
 
 ## 待补充
 

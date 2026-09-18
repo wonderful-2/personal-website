@@ -1,7 +1,8 @@
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { content, type NavLink } from "../content";
 import { primaryGradient } from "../theme";
 import { LogoMark } from "./Logo";
+import SpecularButton from "./SpecularButton";
 
 type NavProps = {
   links: NavLink[];
@@ -24,14 +25,23 @@ export function Nav({ links, ctaLabel, menuOpen, onToggleMenu }: NavProps) {
       <div className="hidden items-center gap-3 md:flex">
         <div className="flex items-center gap-1 rounded-full bg-white/10 px-1.5 py-1.5 backdrop-blur-lg">
           {links.map((link) => (
-            <a
+            <SpecularButton
               key={link.label}
               href={link.href}
-              className="flex items-center gap-1 rounded-full px-4 py-1.5 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+              size="sm"
+              radius={9999}
+              className="specular-button--nav"
+              lineColor="#ffffff"
+              baseColor="#ffffff"
+              intensity={1.4}
+              shineSize={16}
+              shineFade={45}
+              thickness={1}
+              speed={0.25}
+              proximity={240}
             >
               {link.label}
-              {link.hasChevron && <ChevronDown className="h-3.5 w-3.5" />}
-            </a>
+            </SpecularButton>
           ))}
         </div>
 

@@ -4,7 +4,6 @@ import { EmailSignup } from "./EmailSignup";
 import { MobileMenu } from "./MobileMenu";
 import { Nav } from "./Nav";
 import { StatsCard } from "./StatsCard";
-import { TestimonialCard } from "./TestimonialCard";
 
 export function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,7 +44,6 @@ export function Hero() {
 
           <div className="flex flex-col gap-4 sm:flex-row lg:w-auto lg:gap-5">
             <StatsCard />
-            <TestimonialCard />
           </div>
         </main>
       </div>

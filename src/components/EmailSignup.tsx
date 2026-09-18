@@ -13,7 +13,7 @@ export function EmailSignup() {
         // TODO: 接上真实表单服务（Formspree / 自建 API 等）
         setSent(true);
       }}
-      className="mt-6 flex flex-col gap-3 sm:mt-8 sm:inline-flex sm:flex-row sm:items-center sm:rounded-full sm:bg-white sm:p-1.5"
+      className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center"
     >
       <input
         type="email"
@@ -21,7 +21,7 @@ export function EmailSignup() {
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         placeholder={content.emailCta.placeholder}
-        className="w-full rounded-full bg-white px-5 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none sm:w-64 sm:rounded-none sm:bg-transparent sm:px-4 sm:py-2"
+        className="w-full rounded-full bg-white px-5 py-3 text-sm text-gray-900 placeholder-gray-400 outline-none sm:w-64 sm:py-2.5"
       />
       <button
         type="submit"
@@ -33,4 +33,3 @@ export function EmailSignup() {
     </form>
   );
 }
-
