@@ -4,7 +4,7 @@ export const primaryGradient = "linear-gradient(to bottom, #2B2B2B, #101010)";
 /// 数字/等宽装饰字体（Silkscreen 只含拉丁字符，仅用于数字）
 export const silkscreen = "'Silkscreen', cursive";
 
-/// 背景视频：换成自己的素材时改这一行即可
-export const heroVideoSrc =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260803_192301_9231ed6b-c55c-4a48-909c-4ebe11cf2e11.mp4";
+/// 背景视频：已改为自托管（public/hero.mp4），换成自己的素材时替换该文件即可。
+/// 之前用的是别人 CloudFront 上的地址，随时可能失效，一旦失效首屏就永久变黑。
+export const heroVideoSrc = "/hero.mp4";
 
