@@ -4,11 +4,17 @@
 
 ## 本地运行
 
+最简单的方式：双击项目里的 `启动网站.cmd`，会自动开服务器并打开浏览器。
+
+手动方式：
+
 ```bash
 npm install
 npm run dev      # 本地预览 http://localhost:5173
 npm run build    # 产出静态文件到 dist/
 ```
+
+注意：不要直接双击 `index.html` 打开，Vite 工程必须通过本地服务器访问，直接双击会是空白页。
 
 ## 改内容
 

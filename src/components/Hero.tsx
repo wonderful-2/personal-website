@@ -21,7 +21,9 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative h-screen w-full overflow-hidden bg-black"
+      // 小屏文字是近黑色、lg 以上是白色，兜底底色跟着一起切换，
+      // 这样即使视频没加载出来，文案也不会看不见。
+      className="relative h-screen w-full overflow-hidden bg-neutral-200 lg:bg-black"
     >
       <video
         src={heroVideoSrc}
@@ -64,4 +66,3 @@ export function Hero() {
     </section>
   );
 }
-
