@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+/* 字体改为本地自托管：Google Fonts 在国内访问不了，
+   挂到网上会让访客看到的全是系统默认字体 */
+@import "@fontsource/geist-sans/latin-400.css";
+@import "@fontsource/geist-sans/latin-500.css";
+@import "@fontsource/geist-sans/latin-600.css";
+@import "@fontsource/geist-sans/latin-700.css";
+@import "@fontsource/silkscreen/latin-400.css";
+
 @theme {
   --font-sans:
-    "Geist", -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Geist Sans", -apple-system, BlinkMacSystemFont, "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
@@ -15,7 +23,7 @@
     margin: 0;
     background-color: #0a0a0a;
     font-family:
-      "Geist", -apple-system, BlinkMacSystemFont, "PingFang SC",
+      "Geist Sans", -apple-system, BlinkMacSystemFont, "PingFang SC",
       "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

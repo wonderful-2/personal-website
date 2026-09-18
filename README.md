@@ -46,6 +46,17 @@ src/
 
 - 背景视频全站固定，滚过首屏后会渐入一层深色薄纱（浓度在 `Backdrop.tsx` 的 `0.85` 调整）。
 - 导航里四个锚点用的是 React Bits 的 `SpecularButton`，鼠标靠近时边缘会有一道扫光跟随。
+- 字体（Geist Sans / Silkscreen）已改为本地自托管，不再依赖 Google Fonts——国内访问不了 Google Fonts，会让访客看到系统默认字体。
+
+## 上线部署
+
+`npm run build` 产出的是纯静态文件（`dist/`），任何静态托管都能跑。三条常见路线：
+
+1. **Netlify Drop**（最快，零配置）：打开 https://app.netlify.com/drop，把整个 `dist` 文件夹拖进去，立刻拿到一个公开网址。
+2. **Cloudflare Pages / Vercel**：仓库推到 GitHub 后在平台导入，构建命令 `npm run build`，输出目录 `dist`。
+3. **阿里云 OSS + CDN**：国内访问最快，但需要域名且必须备案。
+
+还没处理的：背景视频仍在 CloudFront 上（国外 CDN，国内访问可能慢）；邮箱表单还没有真的后端。
 
 ## 待补充
 
