@@ -16,7 +16,7 @@ export const content = {
 
   nav: [
     { label: "关于我", href: "#about" },
-    { label: "项目", href: "#work" },
+    { label: "在做的事", href: "#work" },
     { label: "服务", href: "#services" },
     { label: "联系", href: "#contact" },
   ] satisfies NavLink[],
