@@ -25,7 +25,7 @@ export const content = {
   primaryCta: "取得联系",
 
   /// 主标题
-  headline: "把高高在上的 AI，落到企业一线",
+  headline: "将高高在上的科技，落实到企业一线",
 
   /// 邮箱 CTA
   emailCta: {
@@ -119,7 +119,7 @@ export const content = {
     intro:
       "留个邮箱，或者直接写信给我。说清楚你手上重复、琐碎、想找人试试的那件事，我看到了就回。",
     email: "3534374223@qq.com",
-    note: "TODO：社交链接（GitHub / 即刻 / LinkedIn / 微信公众号）待补充",
+    wechat: "lh3534374223",
   },
 };
 
