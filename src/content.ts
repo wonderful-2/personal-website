@@ -31,7 +31,8 @@ export const content = {
   emailCta: {
     placeholder: "输入你的邮箱",
     button: "取得联系",
-    sent: "已收到",
+    /// 表单还没接后端前，提交后的诚实提示（不要写成“已收到”）
+    handoff: "表单后台还没接好，先直接发我邮件，或者扫码加微信——就在下面的联系板块。",
   },
 
   /// 数据卡片（用 Silkscreen 字体渲染，建议 2-5 个拉丁字符）
