@@ -51,23 +51,41 @@ export function Contact() {
             </a>
           </div>
 
-          <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-5">
-            <span className="w-10 text-xs uppercase tracking-[0.15em] text-white/40">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-5">
+            <span className="w-10 shrink-0 text-xs uppercase tracking-[0.15em] text-white/40 sm:pt-1">
               微信
             </span>
-            <button
-              type="button"
-              onClick={copyWechat}
-              aria-label="复制微信号"
-              className="flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white backdrop-blur-lg transition-colors hover:bg-white/10"
-            >
-              <span className="select-all font-medium">{contact.wechat}</span>
-              {copied ? (
-                <Check className="h-3.5 w-3.5 text-white/60" />
-              ) : (
-                <Copy className="h-3.5 w-3.5 text-white/40" />
-              )}
-            </button>
+
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
+              <img
+                src="/wechat-qr.jpg"
+                alt="耿通的微信二维码"
+                width={704}
+                height={704}
+                className="h-32 w-32 shrink-0 rounded-xl object-contain ring-1 ring-white/10 sm:h-36 sm:w-36"
+              />
+
+              <div className="flex flex-col gap-2">
+                <p className="text-sm leading-relaxed text-white/60">
+                  扫码加我微信，或者直接复制微信号
+                </p>
+                <button
+                  type="button"
+                  onClick={copyWechat}
+                  aria-label="复制微信号"
+                  className="flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white backdrop-blur-lg transition-colors hover:bg-white/10"
+                >
+                  <span className="select-all font-medium">
+                    {contact.wechat}
+                  </span>
+                  {copied ? (
+                    <Check className="h-3.5 w-3.5 text-white/60" />
+                  ) : (
+                    <Copy className="h-3.5 w-3.5 text-white/40" />
+                  )}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

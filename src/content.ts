@@ -25,7 +25,7 @@ export const content = {
   primaryCta: "取得联系",
 
   /// 主标题
-  headline: "将高高在上的科技，落实到企业一线",
+  headline: "把 AI 交付到客户的真实业务里",
 
   /// 邮箱 CTA
   emailCta: {
