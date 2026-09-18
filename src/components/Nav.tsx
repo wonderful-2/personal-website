@@ -35,13 +35,13 @@ export function Nav({ links, ctaLabel, menuOpen, onToggleMenu }: NavProps) {
           ))}
         </div>
 
-        <button
-          type="button"
+        <a
+          href="#contact"
           className="flex items-center self-stretch rounded-full px-5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           style={{ background: primaryGradient }}
         >
           {ctaLabel}
-        </button>
+        </a>
       </div>
 
       {/* 移动端汉堡按钮 */}
@@ -66,4 +66,3 @@ export function Nav({ links, ctaLabel, menuOpen, onToggleMenu }: NavProps) {
     </nav>
   );
 }
-

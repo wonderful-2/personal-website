@@ -48,22 +48,21 @@ export function MobileMenu({ links, ctaLabel, open, onClose }: MobileMenuProps) 
         </div>
 
         <div className="mt-auto px-6 pb-10">
-          <button
-            type="button"
+          <a
+            href="#contact"
             onClick={onClose}
             style={{
               background: primaryGradient,
               transitionDelay: open ? "300ms" : "0ms",
             }}
-            className={`w-full rounded-full px-6 py-3 text-sm font-medium text-white transition-all duration-[400ms] hover:opacity-90 ${
+            className={`block w-full rounded-full px-6 py-3 text-center text-sm font-medium text-white transition-all duration-[400ms] hover:opacity-90 ${
               open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
             }`}
           >
             {ctaLabel}
-          </button>
+          </a>
         </div>
       </div>
     </>
   );
 }
-
