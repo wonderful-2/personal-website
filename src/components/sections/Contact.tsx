@@ -55,7 +55,7 @@ export function Contact() {
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-5">
               <img
-                src="/wechat-qr.jpg"
+                src={contact.qrImage}
                 alt="耿通的微信二维码"
                 width={704}
                 height={704}

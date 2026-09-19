@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import type { NavLink } from "../content";
 
 type MobileMenuProps = {
@@ -40,7 +39,6 @@ export function MobileMenu({ links, open, onClose }: MobileMenuProps) {
               }`}
             >
               <span>{link.label}</span>
-              {link.hasChevron && <ChevronDown className="h-4 w-4" />}
             </a>
           ))}
         </div>

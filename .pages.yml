@@ -1,0 +1,96 @@
+# Pages CMS 配置：登录 https://app.pagescms.org 用 GitHub 账号授权本仓库后，
+# 就能在网页上像填表单一样改下面的内容，保存即自动提交并触发 Cloudflare 重新部署。
+
+media:
+  input: public
+  output: /
+  categories: ["image"]
+
+content:
+  - name: site
+    label: 网站内容
+    type: file
+    path: src/content.json
+    fields:
+      - name: brand
+        label: 左上角的名字
+        type: string
+        required: true
+
+      - name: headline
+        label: 首屏大标题
+        type: string
+        required: true
+
+      - name: nav
+        label: 顶部导航（文字 / 跳转锚点）
+        type: object
+        list: true
+        fields:
+          - { name: label, label: 显示文字, type: string, required: true }
+          - { name: href, label: 跳转锚点, type: string, required: true }
+
+      - name: stats
+        label: 首屏右侧卡片
+        type: object
+        fields:
+          - { name: value, label: 大字，建议 2-5 个拉丁字符, type: string }
+          - { name: body, label: 说明, type: text }
+
+      - name: about
+        label: 关于我
+        type: object
+        fields:
+          - { name: label, label: 小标签（英文，显示在标题上方）, type: string }
+          - { name: title, label: 板块标题, type: string }
+          - { name: paragraphs, label: 正文段落（一段一条）, type: text, list: true }
+          - name: facts
+            label: 右侧信息条
+            type: object
+            list: true
+            fields:
+              - { name: label, label: 小标题, type: string }
+              - { name: value, label: 内容, type: string }
+
+      - name: work
+        label: 在做的事
+        type: object
+        fields:
+          - { name: label, label: 小标签（英文）, type: string }
+          - { name: title, label: 板块标题, type: string }
+          - { name: intro, label: 引言, type: text }
+          - name: projects
+            label: 条目
+            type: object
+            list: true
+            fields:
+              - { name: title, label: 标题, type: string, required: true }
+              - { name: description, label: 描述, type: text }
+              - { name: tags, label: 标签（每个一条）, type: string, list: true }
+              - { name: meta, label: 右下角小字, type: string }
+
+      - name: services
+        label: 服务
+        type: object
+        fields:
+          - { name: label, label: 小标签（英文）, type: string }
+          - { name: title, label: 板块标题, type: string }
+          - { name: intro, label: 引言, type: text }
+          - name: items
+            label: 条目
+            type: object
+            list: true
+            fields:
+              - { name: title, label: 标题, type: string, required: true }
+              - { name: description, label: 描述, type: text }
+
+      - name: contact
+        label: 联系
+        type: object
+        fields:
+          - { name: label, label: 小标签（英文）, type: string }
+          - { name: title, label: 板块标题, type: string }
+          - { name: intro, label: 引言, type: text }
+          - { name: email, label: 邮箱, type: string, required: true }
+          - { name: wechat, label: 微信号, type: string }
+          - { name: qrImage, label: 微信二维码图片, type: image }
