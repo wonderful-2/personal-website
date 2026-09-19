@@ -44,7 +44,8 @@ src/
 ## 说明
 
 - 背景视频全站固定，滚过首屏后会渐入一层深色薄纱（浓度在 `Backdrop.tsx` 的 `0.85` 调整）。
-- 背景视频自托管在 `public/hero.mp4`（约 14MB），换素材直接替换该文件，路径写在 `src/theme.ts`。
+- 背景视频自托管在 `public/hero.mp4`（已压到约 2MB，1080p / CRF 28），换素材直接替换该文件。
+- 视频**不循环**，播完停在最后一帧的远景；加载期间显示 `public/hero-poster.jpg`（视频第一帧），不会出现黑屏。
 - 导航里四个锚点用的是 React Bits 的 `SpecularButton`，鼠标靠近时边缘会有一道扫光跟随。
 - 字体（Geist Sans / Silkscreen）已改为本地自托管，不再依赖 Google Fonts——国内访问不了 Google Fonts，会让访客看到系统默认字体。
 - 联系方式只有两个：微信二维码（`public/wechat-qr.jpg`，点击可复制微信号）和邮箱。**故意不做邮箱表单**——国内访客更愿意扫码加微信，表单反而多一道手续。

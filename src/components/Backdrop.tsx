@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { heroVideoSrc } from "../theme";
+import { heroPosterSrc, heroVideoSrc } from "../theme";
 
 /// 全站共用的一层背景：首屏那段视频固定在视口里，
 /// 往下滚动时用一层深色薄纱把画面压暗，让下面的板块浮在同一段影像上。
@@ -34,8 +34,8 @@ export function Backdrop() {
     >
       <video
         src={heroVideoSrc}
+        poster={heroPosterSrc}
         autoPlay
-        loop
         muted
         playsInline
         className="h-full w-full object-cover"
