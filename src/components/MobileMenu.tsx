@@ -1,15 +1,13 @@
 import { ChevronDown } from "lucide-react";
-import { content, type NavLink } from "../content";
-import { primaryGradient } from "../theme";
+import type { NavLink } from "../content";
 
 type MobileMenuProps = {
   links: NavLink[];
-  ctaLabel: string;
   open: boolean;
   onClose: () => void;
 };
 
-export function MobileMenu({ links, ctaLabel, open, onClose }: MobileMenuProps) {
+export function MobileMenu({ links, open, onClose }: MobileMenuProps) {
   return (
     <>
       {/* 遮罩 */}
@@ -45,22 +43,6 @@ export function MobileMenu({ links, ctaLabel, open, onClose }: MobileMenuProps) 
               {link.hasChevron && <ChevronDown className="h-4 w-4" />}
             </a>
           ))}
-        </div>
-
-        <div className="mt-auto px-6 pb-10">
-          <a
-            href="#contact"
-            onClick={onClose}
-            style={{
-              background: primaryGradient,
-              transitionDelay: open ? "300ms" : "0ms",
-            }}
-            className={`block w-full rounded-full px-6 py-3 text-center text-sm font-medium text-white transition-all duration-[400ms] hover:opacity-90 ${
-              open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-            }`}
-          >
-            {ctaLabel}
-          </a>
         </div>
       </div>
     </>

@@ -21,14 +21,8 @@ export const content = {
     { label: "联系", href: "#contact" },
   ] satisfies NavLink[],
 
-  /// 导航右侧按钮 / 移动端底部按钮
-  primaryCta: "取得联系",
-
   /// 主标题
   headline: "把 AI 交付到客户的真实业务里",
-
-  /// 首屏按钮：直接跳到下面的联系板块（不留邮箱，直接加微信/发邮件）
-  heroCta: "联系我",
 
   /// 数据卡片（用 Silkscreen 字体渲染，建议 2-5 个拉丁字符）
   stats: {

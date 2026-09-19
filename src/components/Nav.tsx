@@ -1,17 +1,15 @@
 import { Menu, X } from "lucide-react";
 import { content, type NavLink } from "../content";
-import { primaryGradient } from "../theme";
 import { LogoMark } from "./Logo";
 import SpecularButton from "./SpecularButton";
 
 type NavProps = {
   links: NavLink[];
-  ctaLabel: string;
   menuOpen: boolean;
   onToggleMenu: () => void;
 };
 
-export function Nav({ links, ctaLabel, menuOpen, onToggleMenu }: NavProps) {
+export function Nav({ links, menuOpen, onToggleMenu }: NavProps) {
   return (
     <nav className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
       <a href="#top" className="flex items-center gap-2">
@@ -44,14 +42,6 @@ export function Nav({ links, ctaLabel, menuOpen, onToggleMenu }: NavProps) {
             </SpecularButton>
           ))}
         </div>
-
-        <a
-          href="#contact"
-          className="flex items-center self-stretch rounded-full px-5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          style={{ background: primaryGradient }}
-        >
-          {ctaLabel}
-        </a>
       </div>
 
       {/* 移动端汉堡按钮 */}
